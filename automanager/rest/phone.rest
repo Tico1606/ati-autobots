@@ -1,0 +1,30 @@
+### 📌 Criar número de telefone
+POST http://localhost:8080/phone-numbers
+Content-Type: application/json
+
+{
+  "countryCode": "+55",
+  "areaCode": "11",
+  "number": "987654321",
+  "type": "Mobile"
+}
+
+### 📌 Listar todos os telefones
+GET http://localhost:8080/phone-numbers
+
+### 📌 Buscar telefone por ID
+GET http://localhost:8080/phone-numbers/1
+
+### 📌 Atualizar telefone
+PUT http://localhost:8080/phone-numbers/1
+Content-Type: application/json
+
+{
+  "countryCode": "+55",
+  "areaCode": "21",
+  "number": "998877665",
+  "type": "Home"
+}
+
+### 📌 Deletar telefone
+DELETE http://localhost:8080/phone-numbers/2

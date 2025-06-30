@@ -1,0 +1,80 @@
+### 📌 Criar cliente
+POST http://localhost:8080/customers
+Content-Type: application/json
+
+{
+  "fullName": "João Silva",
+  "socialName": "Joãozinho",
+  "birthDate": "1990-01-01",
+  "createdAt": "2024-06-01",
+  "address": {
+    "state": "SP",
+    "city": "São Paulo",
+    "district": "Centro",
+    "street": "Rua das Flores",
+    "number": "123",
+    "postalCode": "01001-000",
+    "additionalInfo": "Apartamento 45"
+  },
+  "documents": [
+    {
+      "type": "RG",
+      "number": "123456789",
+      "issuer": "SSP",
+      "issueDate": "2010-05-20",
+      "expirationDate": "2030-05-20",
+      "state": "SP"
+    }
+  ],
+  "phones": [
+    {
+      "ddd": "11",
+      "number": "91234-5678"
+    }
+  ]
+}
+
+### 📌 Listar todos os clientes
+GET http://localhost:8080/customers
+
+### 📌 Buscar cliente por ID
+GET http://localhost:8080/customers/1
+
+### 📌 Atualizar cliente
+PUT http://localhost:8080/customers/1
+Content-Type: application/json
+
+{
+  "fullName": "João da Silva Atualizado",
+  "socialName": "Joãozinho Atualizado",
+  "birthDate": "1991-02-02",
+  "createdAt": "2024-06-15",
+  "address": {
+    "state": "SP",
+    "city": "Campinas",
+    "district": "Jardim Paulista",
+    "street": "Rua Nova",
+    "number": "999",
+    "postalCode": "13000-000",
+    "additionalInfo": "Casa"
+  },
+  "documents": [
+    {
+      "type": "CPF",
+      "number": "98765432100",
+      "issuer": "Receita Federal",
+      "issueDate": "2005-03-15",
+      "expirationDate": "9999-12-31",
+      "state": "SP"
+    }
+  ],
+  "phones": [
+    {
+      "ddd": "21",
+      "number": "998877665"
+    }
+  ]
+}
+
+### 📌 Deletar cliente
+DELETE http://localhost:8080/customers/2

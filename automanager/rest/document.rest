@@ -1,0 +1,34 @@
+### 📌 Criar documento
+POST http://localhost:8080/identity-documents
+Content-Type: application/json
+
+{
+  "type": "RG",
+  "number": "123456789",
+  "issuer": "SSP",
+  "issueDate": "2010-05-20",
+  "expirationDate": "2030-05-20",
+  "state": "SP"
+}
+
+### 📌 Listar todos os documentos
+GET http://localhost:8080/identity-documents
+
+### 📌 Buscar documento por ID
+GET http://localhost:8080/identity-documents/1
+
+### 📌 Atualizar documento
+PUT http://localhost:8080/identity-documents/1
+Content-Type: application/json
+
+{
+  "type": "CPF",
+  "number": "98765432100",
+  "issuer": "Receita Federal",
+  "issueDate": "2005-03-15",
+  "expirationDate": "9999-12-31",
+  "state": "SP"
+}
+
+### 📌 Deletar documento
+DELETE http://localhost:8080/identity-documents/2

@@ -1,0 +1,38 @@
+### 📌 Criar endereço
+POST http://localhost:8080/addresses
+Content-Type: application/json
+
+{
+  "street": "Rua das Flores",
+  "number": "123",
+  "complement": "Apto 45",
+  "district": "Centro",
+  "city": "São Paulo",
+  "state": "SP",
+  "zipcode": "01001-000",
+  "country": "Brasil"
+}
+
+### 📌 Listar todos os endereços
+GET http://localhost:8080/addresses
+
+### 📌 Buscar endereço por ID
+GET http://localhost:8080/addresses/1
+
+### 📌 Atualizar endereço
+PUT http://localhost:8080/addresses/1
+Content-Type: application/json
+
+{
+  "street": "Rua das Palmeiras",
+  "number": "456",
+  "complement": "Casa 2",
+  "district": "Jardim",
+  "city": "Rio de Janeiro",
+  "state": "RJ",
+  "zipcode": "22040-002",
+  "country": "Brasil"
+}
+
+### 📌 Deletar endereço
+DELETE http://localhost:8080/addresses/1
